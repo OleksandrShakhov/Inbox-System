@@ -1,0 +1,30 @@
+{% extends '500.html' %}
+
+<!-- Title on tab browser -->
+{% block title %} error 404 {% endblock title %}
+
+<!-- Block auto-logout denied here -->
+{% block auto-logout %}{% endblock auto-logout %}
+
+<!-- Block Sidebar content -->
+{% block sidebar-content %}
+{% if user.is_authenticated %}
+<a class="btn btn-secondary" href="{% url 'inbox' %}">Back</a>
+{% else %}
+<a class="btn btn-secondary" href="{% url 'home' %}">Back</a>
+{% endif %}
+{% endblock sidebar-content %}
+
+<!-- Page content -->
+{% block error-body %}
+<span class="text-danger mb-5 error-404">404</span>
+<h5 class="text-danger mb-3 error-txt1">THE PAGE YOU ENTERED DOES NOT EXIST</h5>
+<h6 class="text-dark txt-sm" style="line-height: 1.5em;">If you are sure this is a system error, we kindly ask you to notify our
+	<a class="text-primary" href="#">Technical support.</a>
+</h6>
+{% endblock error-body %}
+
+<!-- ===== Blocks denied here ===== -->
+{% block reason %}{% endblock reason %}
+
+{% block note %}{% endblock note %}

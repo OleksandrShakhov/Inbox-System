@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+<!-- Block auto-logout denied here -->
+{% block auto-logout %}{% endblock auto-logout %}
+
+<!-- Page content -->
+{% block content %}
+
+<!-- Typed effect -->
+<div class="block-position">
+	<h1 class="text-light typed-text">We
+		<span id="element" style="color: #8abaae;"></span>
+	</h1>
+</div>
+
+<!-- Message -->
+<div>
+	<button class="btn text-light pulse txt-sm" style="background-color: #5ca08e;" data-bs-toggle="modal" data-bs-target="#messageModal">
+		<i class="fas fa-envelope fa-2x"></i>
+	</button>
+</div>
+
+{% endblock content %}
